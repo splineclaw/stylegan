@@ -83,7 +83,7 @@ if 0:
 #----------------------------------------------------------------------------
 # For training smaller, 128 dim datasets.
 
-if 1:
+if 0:
     desc          = 'sgan'                                                                 # Description string included in result subdir name.
     train         = EasyDict(run_func_name='training.training_loop.training_loop')         # Options for training loop.
     G             = EasyDict(func_name='training.networks_stylegan.G_style')               # Options for generator network.
