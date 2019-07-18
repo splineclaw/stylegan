@@ -83,7 +83,7 @@ if 0:
 #----------------------------------------------------------------------------
 # For training smaller, 128 dim datasets.
 
-if 0:
+if 1:
     desc          = 'sgan'                                                                 # Description string included in result subdir name.
     train         = EasyDict(run_func_name='training.training_loop.training_loop')         # Options for training loop.
     G             = EasyDict(func_name='training.networks_stylegan.G_style')               # Options for generator network.
@@ -107,7 +107,7 @@ if 0:
     #desc += '-bedroom';  dataset = EasyDict(tfrecord_dir='lsun-bedroom-full');    train.mirror_augment = False
     #desc += '-car';      dataset = EasyDict(tfrecord_dir='lsun-car-512x384');     train.mirror_augment = False
     #desc += '-cat';      dataset = EasyDict(tfrecord_dir='lsun-cat-full');        train.mirror_augment = False
-    desc += '-maw';       dataset = EasyDict(tfrecord_dir='/drive/maw-128');       train.mirror_augment = True
+    desc += '-maw';       dataset = EasyDict(tfrecord_dir='/content/drive/My Drive/stylegan/maw-128-dataset');       train.mirror_augment = True
 
     # Number of GPUs.
     desc += '-1gpu'; submit_config.num_gpus = 1; sched.minibatch_base = 4; sched.minibatch_dict = {4: 128, 8: 128, 16: 128, 32: 64, 64: 32, 128: 16, 256: 8, 512: 4}
